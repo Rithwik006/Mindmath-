@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mental Math Master | Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Login Screen -->
+  <div class="container" id="login-screen">
+    <h1>Login to Play 🧠</h1>
+    <input type="text" id="name" placeholder="Enter your name" required>
+    <input type="email" id="email" placeholder="Enter your email" required>
+    <button onclick="sendOTP()">Send OTP</button>
+  </div>
+
+  <!-- OTP Screen -->
+  <div class="container" id="otp-screen" style="display:none;">
+    <h2>Enter OTP</h2>
+    <p>We sent a code to your email (simulation).</p>
+    <input type="text" id="otp-input" placeholder="Enter OTP" required>
+    <button onclick="verifyOTP()">Verify OTP</button>
+  </div>
+
+  <!-- Game Start Screen -->
+  <div class="container" id="start-screen" style="display:none;">
+    <h1>Welcome, <span id="user-name"></span>!</h1>
+    <button onclick="startGame()">Start Game</button>
+  </div>
+
+  <!-- Game Screen -->
+  <div class="container" id="game-screen" style="display:none;">
+    <div id="question">Question comes here</div>
+    <div class="options" id="options"></div>
+    <div id="timer">Time Left: <span id="time">10</span>s</div>
+    <div id="score">Score: 0</div>
+  </div>
+
+  <!-- End Screen -->
+  <div class="container" id="end-screen" style="display:none;">
+    <h2>Game Over!</h2>
+    <p>Your Score: <span id="final-score"></span></p>
+    <button onclick="restartGame()">Play Again</button>
+    <h3>Leaderboard</h3>
+    <ol id="leaderboard"></ol>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
